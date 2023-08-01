@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}主页 - AccountSystem{% endblock %}
+{% block pagetitle %}主页 - AccountSystem{% endblock %}
+{% block content %}
+<center>
+    <p class="mdui-typo-display-2">AccountSystem</p>
+    <span class="mdui-color-theme-accent">{{ message }}</span>
+    <hr><br>
+    <button class="mdui-btn mdui-ripple" onclick="document.location.pathname='/signup'">注册</button><span class="mdui-type-display-1">|</span><button class="mdui-btn mdui-ripple" onclick="document.location.pathname='/login'">登入</button>
+</center>
+{% endblock %}

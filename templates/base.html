@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <!-- MDUI CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"/>
+    <title>{% block title %}无标题{% endblock %}</title>
+  </head>
+  <body class="mdui-theme-layout-auto mdui-container-fluid mdui-theme-accent-blue">
+    <div class="mdui-appbar">
+        <body class="mdui-drawer-body-right">
+
+            
+            <div class="mdui-drawer mdui-drawer-close mdui-typo" id="left-drawer">
+              <button class="mdui-btn mdui-btn-icon" mdui-drawer-close>
+                <i class="mdui-icon material-icons">close</i>
+              </button>
+              <h3 class="mdui-p-a-2">AccountSystem</h3>
+              <h5 class="mdui-p-a-2">By 0x24a, Only for demo.<br> Under AGPL-3.0 license.</h5>
+              <ul class="mdui-list mdui-p-a-2">
+                <li class="mdui-list-item mdui-ripple" onclick="document.location.pathname='/signup'">
+                    <div class="mdui-list-item-content">Register</div>
+                    <i class="mdui-list-item-icon mdui-icon material-icons">person_add</i>
+                
+                </li>
+                <li class="mdui-list-item mdui-ripple" onclick="document.location.pathname='/login'">
+                    <div class="mdui-list-item-content">Login</div>
+                    <i class="mdui-list-item-icon mdui-icon material-icons">add_circle_outline</i>
+                
+                </li>
+                <li class="mdui-list-item mdui-ripple" onclick="document.location.pathname='/logout'">
+                  <div class="mdui-list-item-content">Logout</div>
+                  <i class="mdui-list-item-icon mdui-icon material-icons">remove_circle_outline</i>
+                </li>
+                <li class="mdui-list-item mdui-ripple" onclick="document.location.pathname='/clientarea'">
+                  <div class="mdui-list-item-content">User Center</div>
+                  <i class="mdui-list-item-icon mdui-icon material-icons">account_circle</i>
+                </li>
+              </ul>
+            </div>
+          
+          </body>
+        <div class="mdui-toolbar mdui-color-theme">
+          <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
+            <i class="mdui-icon material-icons">menu</i>
+          </a>
+          <a href="javascript:;" class="mdui-typo-headline">{% block pagetitle %}无标题{% endblock %}</a>
+          <div class="mdui-toolbar-spacer"></div>
+          <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+            <i class="mdui-icon material-icons">refresh</i>
+          </a>
+          <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+            <i class="mdui-icon material-icons">more_vert</i>
+          </a>
+        </div>
+      </div>
+    {% block content %}{% endblock %}
+    <!-- MDUI JavaScript -->
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+  </body>
+</html>

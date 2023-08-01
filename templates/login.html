@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}登入 - AccountSystem{% endblock %}
+{% block pagetitle %}登入 - AccountSystem{% endblock %}
+{% block content %}
+<div class="mdui-p-a-4">
+    <form action="/api/login" id="login" method="post">
+    <div class="mdui-textfield mdui-textfield-floating-label">
+        <label class="mdui-textfield-label">Email</label>
+        <input class="mdui-textfield-input" type="email" name="email"/>
+      </div>
+      <div class="mdui-textfield mdui-textfield-floating-label">
+        <label class="mdui-textfield-label">Password</label>
+        <input class="mdui-textfield-input" type="password" name="password"/>
+      </div><br>
+      <a onclick="document.location.pathname='/signup'" class="mdui-btn mdui-float-right mdui-raised">没有账号?</a>
+
+      <br><br><br>
+      <button class="mdui-btn mdui-color-theme-accent mdui-ripple mdui-btn-block mdui-raised" onclick="document.getElementById('login').submit()">login</button>
+    </form>
+</div>
+{% endblock %}

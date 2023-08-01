@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}重定向 - AccountSystem{% endblock %}
+{% block pagetitle %}重定向 - AccountSystem{% endblock %}
+{% block content %}
+<center>
+    <p class="mdui-typo-display-2">{{ message }}</p>
+    <script>
+        function redirect(){
+            document.location.pathname="/"
+        }
+        setTimeout(redirect,1000)
+    </script></center>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}用户中心 - AccountSystem{% endblock %}
+{% block pagetitle %}用户中心 - AccountSystem{% endblock %}
+{% block content %}
+<div class="mdui-p-a-4">
+    <h1>您好，{{ username }}</h1>
+    <p>上次登录时间: {{ last_login }}</p>
+
+    <s>别问我为什么就这点东西，这就是个demo!</s>
+</div>
+{% endblock %}
